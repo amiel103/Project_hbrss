@@ -89,8 +89,11 @@
 </template>
 
 <script>
+
+
+import Moralis from 'moralis'
+import { mapActions, mapState } from 'vuex'
 export default {
-  name: 'DefaultLayout',
   data () {
     return {
       clipped: false,
@@ -112,6 +115,21 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
+    }
+  },
+
+  methods:{
+    ...mapActions(['loggedin']),
+  },
+
+  computed: {
+    ...mapState(['user'])
+  },
+
+  mounted(){
+    this.loggedin();
+    if(this.user.length == 0){
+      this.$router.push('/login')
     }
   }
 }

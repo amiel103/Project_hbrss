@@ -39,6 +39,9 @@
 <script>
 import Moralis from 'moralis';
 export default {
+
+  layout: 'plain',
+  
   methods:{
 
     data(){

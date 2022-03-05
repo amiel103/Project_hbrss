@@ -14,7 +14,8 @@
 import Moralis from 'moralis';
 
 export default {
-  middleware: 'user_not_login'
+
+  
 }
 
 </script>

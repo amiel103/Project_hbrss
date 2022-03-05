@@ -15,12 +15,12 @@
       
       <v-btn
         class="mr-4"
+        @click="login()"
       >
-        submit
+        Login
       </v-btn>
 
-      <v-btn
-        to='/signup'>
+      <v-btn to='/signup'>
         sign up
       </v-btn>
     </form>
@@ -28,7 +28,38 @@
 </template>
 
 <script>
+
 import Moralis from 'moralis';
+import { mapMutations } from 'vuex';
+
 export default {
+
+  layout: 'plain',
+  
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+
+  methods:{
+    ...mapMutations(['authorize_loggin']),
+
+    async login() {
+      try{
+      const user = await Moralis.User.logIn(this.email, this.password, { usePost: true });
+        
+        if(user){
+          this.$store.commit('authorize_loggin', user)
+        }
+
+
+      }catch(error){
+        alert(error.message)
+      }
+
+    }
+  }
 }
 </script>
