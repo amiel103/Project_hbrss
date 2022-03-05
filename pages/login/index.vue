@@ -20,7 +20,7 @@
       </v-btn>
 
       <v-btn
-        to='/sign_up'>
+        to='/signup'>
         sign up
       </v-btn>
     </form>
@@ -30,6 +30,5 @@
 <script>
 import Moralis from 'moralis';
 export default {
-  name: 'IndexPage'
 }
 </script>

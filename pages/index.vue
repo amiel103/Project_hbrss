@@ -12,23 +12,9 @@
 
 <script>
 import Moralis from 'moralis';
+
 export default {
-  name: 'IndexPage'
-  ,
-  methods:{
-    async get_user(){
-      Moralis.User.currentAsync().then(function(user) {
-          console.log("-----logged in-----");
-          return ;
-      });
-      this.$router.push('/log_in');
-
-
-    }
-  },
-  mounted(){
-    this.get_user()
-  }
-
+  middleware: 'user_not_login'
 }
+
 </script>

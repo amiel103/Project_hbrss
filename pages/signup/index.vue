@@ -39,9 +39,6 @@
 <script>
 import Moralis from 'moralis';
 export default {
-  name: 'IndexPage'
-
-  ,
   methods:{
 
     data(){
