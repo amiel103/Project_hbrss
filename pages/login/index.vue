@@ -35,7 +35,7 @@ import { mapMutations } from 'vuex';
 export default {
 
   layout: 'plain',
-  
+
   data() {
     return {
       email: '',
@@ -44,6 +44,7 @@ export default {
   },
 
   methods:{
+
     ...mapMutations(['authorize_loggin']),
 
     async login() {
@@ -52,6 +53,7 @@ export default {
         
         if(user){
           this.$store.commit('authorize_loggin', user)
+          this.$router.push('/');
         }
 
 

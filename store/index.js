@@ -18,6 +18,8 @@ export const actions = {
         const currentUser =  Moralis.User.current();
         if (currentUser) {
            commit('authorize_loggin', currentUser);
+        }else{
+            commit('authorize_loggin', []);
         }
     },
 }
