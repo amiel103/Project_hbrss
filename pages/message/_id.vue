@@ -38,7 +38,7 @@ export default {
 
             const mainQuery = Moralis.Query.or(isCreator, isInvited);
             const exist = await mainQuery.first();
-        
+            
 
             if(exist == undefined){
                 Chat.save({
