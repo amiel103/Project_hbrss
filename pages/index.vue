@@ -10,7 +10,7 @@
         col="12"
         lg="4"
         >
-            <v-card >
+            <v-card>
               <div class="d-flex justify-center pa-5">
                 <v-avatar size="80" color="primary">
                   <span class="white--text text-h5">CJ</span>
@@ -50,7 +50,9 @@
                   Make Appointment
                 </v-btn>
                 <v-spacer/>
-                <v-btn>
+                <v-btn
+                  :to="'/message/'+item.id"
+                >
                   Message
                 </v-btn>
               </v-card-actions>
