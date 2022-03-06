@@ -178,10 +178,9 @@ export default {
             let query = new Moralis.Query('ChatsMessage');
             let subscription = await query.subscribe();
             subscription.on('create', (object) => {
-                // if(object.get("roomID") == this.$route.params.id){
-                //     this.messages.push(object)
-                // }
-                console.log(object);
+                if(object.get("roomID") == this.$route.params.id){
+                    this.messages.push(object)
+                }
             })
         }
     },
