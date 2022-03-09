@@ -2,7 +2,7 @@
 <!-- admin stuffs -->
     <div>
         <form>
-            <h1>create a paking worker</h1>
+            <h1>create a worker</h1>
             <v-text-field
                 v-model="email"
                 label="E-mail"

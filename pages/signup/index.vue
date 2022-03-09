@@ -1,38 +1,44 @@
 <template>
   <!-- sign up -->
   <div>
-    <form>
-      <v-text-field
-        v-model="name"
-        label="Name"
-      ></v-text-field>
+    <v-card class='pa-5'>
+      <form>
+        <v-text-field
+          v-model="name"
+          label="Name"
+        ></v-text-field>
 
-      <v-text-field
-        v-model="email"
-        label="E-mail"
-      ></v-text-field>
+        <v-text-field
+          v-model="email"
+          label="E-mail"
+        ></v-text-field>
 
-      <v-text-field
-        v-model="password"
-        label="password"
-      ></v-text-field>
+        <v-text-field
+          v-model="password"
+          label="password"
+          type="password"
+        ></v-text-field>
 
-      <v-text-field
-        v-model="re_password"
-        label="confirm password"
-      ></v-text-field>
-      
-      <v-btn
-        class="mr-4"
-      >
-        submit
-      </v-btn>
+        <v-text-field
+          v-model="re_password"
+          label="confirm password"
+          type="password"
+        ></v-text-field>
+        
+        <div>
+          <v-btn
+            class="mr-4"
+          >
+            submit
+          </v-btn>
 
-      <v-btn
-        @click="signup()">
-        sign up
-      </v-btn>
-    </form>
+          <v-btn
+            @click="signup()">
+            sign up
+          </v-btn>
+        </div>
+      </form>
+    </v-card>
   </div>
 </template>
 

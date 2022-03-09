@@ -17,6 +17,15 @@
 
       <div v-if="user.length != 0">
         <v-btn
+          icon
+          to="/about"
+        >
+          <v-icon>
+            mdi-wrench
+          </v-icon>
+        </v-btn>
+
+        <v-btn
         icon
         >
           <v-icon>

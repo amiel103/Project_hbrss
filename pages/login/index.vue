@@ -1,29 +1,41 @@
 <template>
   <!-- log in  -->
   <div>
-    <form>
-      <v-text-field
-        v-model="email"
-        label="E-mail"
-      ></v-text-field>
+    <v-card class='pa-5'>
+      <h2>Home Based Repair System</h2>
+      <form>
+        <v-text-field
+          v-model="email"
+          label="E-mail"
+        ></v-text-field>
 
-      <v-text-field
-        v-model="password"
-        label="password"
-      ></v-text-field>
+        <v-text-field
+          v-model="password"
+          label="password"
+          type="password"
+        ></v-text-field>
 
-      
-      <v-btn
-        class="mr-4"
-        @click="login()"
-      >
-        Login
-      </v-btn>
+        <div class="d-flex justify-center">
+          <v-btn
+            class="mr-4"
+            @click="login()"
+          >
+            Login
+          </v-btn>
 
-      <v-btn to='/signup'>
-        sign up
-      </v-btn>
-    </form>
+          <v-btn to='/signup'>
+            sign up
+          </v-btn>
+
+
+        </div>
+        
+      </form>
+
+
+
+    </v-card>
+    
   </div>
 </template>
 
